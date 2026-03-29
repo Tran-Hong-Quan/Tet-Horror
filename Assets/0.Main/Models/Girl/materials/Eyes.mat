@@ -44,14 +44,17 @@ Material:
     m_Floats:
     - _EnvironmentalLightingIntensity: 1.5
     - _GIFlatShade: 1
-    - _GIShadeThreshold: 0
+    - _GIShadeThreshold: 0.1
     - _LigIgnoYNorDir: 0
+    - _LightAffectShadow: 0
     - _LightFalloffSoftness: 1
     - _MaiColPo: 0.8
     - _N_F_EAL: 1
+    - _N_F_LLI: 0
     - _N_F_O: 0
     - _OutlineWidth: 0.5
     - _RELG: 1
+    - _UseTLB: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

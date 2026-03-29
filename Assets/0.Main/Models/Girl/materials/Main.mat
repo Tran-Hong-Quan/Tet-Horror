@@ -180,7 +180,7 @@ Material:
     - _EnvironmentalLightingIntensity: 1.5
     - _FarDistanceMaxWidth: 10
     - _GIFlatShade: 1
-    - _GIShadeThreshold: 0
+    - _GIShadeThreshold: 0.1
     - _GlossColorPower: 10
     - _GlossIntensity: 1
     - _GlossMapScale: 1
@@ -262,7 +262,7 @@ Material:
     - _Oper: 0
     - _OutStenPass: 0
     - _OutlineExtrudeMethod: 0
-    - _OutlineWidth: 2
+    - _OutlineWidth: 0.3
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _OverallShadowColorPower: 1

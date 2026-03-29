@@ -1,16 +1,27 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 [System.Serializable]
 public class DialogueLine
 {
-    public string speakerName;  // Tên người 
-    [TextArea(2, 5)] public string dialogueText;  // Nội dung hội thoại
+    [SerializeField] private LocalizedString speakerName;
+    [SerializeField] private LocalizedString dialogueText;
+    
+    public string GetSpeakerName()
+    {
+        return speakerName.GetLocalizedString();
+    }
+
+    public string GetDialogueText()
+    {
+        return dialogueText.GetLocalizedString();
+    }
 }
 
 [CreateAssetMenu(fileName = "New Dialogue", menuName = "ScriptableObjects/Dialogue Data")]
 public class DialogueData : ScriptableObject
 {
-    public List<DialogueLine> lines;  // Danh sách các câu thoại
+    public List<DialogueLine> lines; 
     public List<string> choices;  
 }

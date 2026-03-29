@@ -27,11 +27,10 @@ Material:
   m_ValidKeywords:
   - N_F_DDMD_ON
   - N_F_EAL_ON
-  - N_F_O_ON
   - N_F_RDC_ON
   - N_F_RELGI_ON
+  - N_F_SIMTRANS_ON
   - N_F_SS_ON
-  - N_F_TRANSAFFSHA_ON
   - N_F_TRANS_ON
   - N_F_USETLB_ON
   m_InvalidKeywords:
@@ -46,6 +45,7 @@ Material:
   disabledShaderPasses:
   - MOTIONVECTORS
   - DepthOnly
+  - SRPDEFAULTUNLIT
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -249,7 +249,7 @@ Material:
     - _N_F_NFD: 0
     - _N_F_NLASOBF: 0
     - _N_F_NM: 0
-    - _N_F_O: 1
+    - _N_F_O: 0
     - _N_F_OFLMB: 0
     - _N_F_PA: 0
     - _N_F_PT: 0
@@ -328,7 +328,7 @@ Material:
     - _ShowInAmbientLightShadowIntensity: 1
     - _ShowInAmbientLightShadowThreshold: 0.4
     - _ShowNormal: 0
-    - _SimTrans: 0
+    - _SimTrans: 1
     - _SkinMatrixIndex: 0
     - _SmoothObjectNormal: 0
     - _Smoothness: 0.45
@@ -342,7 +342,7 @@ Material:
     - _TRANSMODE: 1
     - _TexturePatternStyle: 0
     - _TrailSize: 1.5
-    - _TransAffSha: 1
+    - _TransAffSha: 0
     - _TransparentThreshold: 0
     - _TriPlaBlend: 4
     - _TriPlaTile: 1
@@ -362,7 +362,7 @@ Material:
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.5201779, g: 0.8037735, b: 0.7690662, a: 0.1764706}
+    - _MainColor: {r: 0.5201779, g: 0.8037735, b: 0.7690662, a: 1}
     - _ObjPosi: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectForward: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectRight: {r: 0, g: 0, b: 0, a: 0}

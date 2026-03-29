@@ -25,11 +25,7 @@ public class PickableObject : InteractableObject
 
     public virtual void PickUp(CharacterInteract characterInteract)
     {
-        if (rb != null)
-        {
-            rb.isKinematic = true;
-            rb.detectCollisions = false;
-        }
+        SetPickable(false);
         characterInteract.PickUp(this);
         onPickUp?.Invoke(this);
     }
@@ -49,8 +45,7 @@ public class PickableObject : InteractableObject
 
         if (rb != null)
         {
-            rb.isKinematic = false;
-            rb.detectCollisions = true;
+            SetPickable(true);
             rb.AddForce(characterInteract.transform.forward * characterInteract.ThrowHoldingObjectForce, ForceMode.Impulse);
         }
     }

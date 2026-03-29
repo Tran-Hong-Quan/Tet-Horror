@@ -45,7 +45,7 @@ public class DialogueManager : MonoBehaviour
         List<string> choices = null;
         if (IsLastDialogue())
             choices = dialogueData.choices;
-        OnDialogueUpdated?.Invoke(currentLine.speakerName, currentLine.dialogueText, choices);
+        OnDialogueUpdated?.Invoke(currentLine.GetSpeakerName(), currentLine.GetDialogueText(), choices);
     }
     public bool IsLastDialogue()
     {

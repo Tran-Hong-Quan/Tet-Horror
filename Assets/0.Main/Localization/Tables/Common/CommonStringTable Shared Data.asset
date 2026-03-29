@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: CommonStringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: CommonStringTable
+  m_TableCollectionNameGuidString: 3826b74f2f150184ca920c815a9790b7
+  m_Entries:
+  - m_Id: 69878554624
+    m_Key: 'Upload
+
+      Image'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1337813313658880
+    m_Key: Pick up dried chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1343791639699456
+    m_Key: Change Hairclip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2591977293357056
+    m_Key: Choosing a holiday gift for your sister.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7299982463213568
+    m_Key: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7300775446716416
+    m_Key: Dried chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7302586824007680
+    m_Key: Karaoke microphone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7302716922929152
+    m_Key: Knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7302814398554112
+    m_Key: Confectionery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7303485948567552
+    m_Key: Clothes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8765026250137600
+    m_Key: You
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8765135423676416
+    m_Key: Sis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8765510646112256
+    m_Key: Thank you Room 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8766130551660544
+    m_Key: Let's have a New Year's meal!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8766361762668544
+    m_Key: This year, it's just us.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8766813971554304
+    m_Key: I've prepared a lot of meat in the kitchen; could you please bring it
+      out here for me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8767207778951168
+    m_Key: How did you know I was missing this?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8767536859848704
+    m_Key: You really understand the feelings of someone who has to live alone.
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2113259250992283765
+  references:
+    version: 2
+    RefIds:
+    - rid: 2113259250992283765
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1772626669310

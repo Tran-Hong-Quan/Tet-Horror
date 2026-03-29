@@ -8,7 +8,8 @@ public class TimelineEndTrigger : MonoBehaviour
     public UnityEvent<PlayableDirector> onTrigger;
     void Awake()
     {
-        timeline = GetComponent<PlayableDirector>();
+        if (!timeline)
+            timeline = GetComponent<PlayableDirector>();
         timeline.stopped += OnTimelineEnd;
     }
 

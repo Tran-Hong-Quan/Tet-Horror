@@ -93,6 +93,14 @@ MonoBehaviour:
     m_Localized: You really understand the feelings of someone who has to live alone.
     m_Metadata:
       m_Items: []
+  - m_Id: 8912996912209920
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8926395792498688
+    m_Localized: When you're done, come and get this red gift!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

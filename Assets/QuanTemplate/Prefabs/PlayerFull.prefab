@@ -43,7 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 73ea8362bc3e05046a7d3283cf810d48, type: 3}
+  m_Resource: {fileID: 8300000, guid: eb7515ae319e27b4bbf93cd8aab71f67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
@@ -343,10 +343,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 226431298232203475}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -18.988005}
-  m_SizeDelta: {x: 578.7319, y: 138.7615}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -14.1121}
+  m_SizeDelta: {x: -100, y: 228.8797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2983138642305907254
 CanvasRenderer:
@@ -378,11 +378,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 43
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -405,6 +405,7 @@ GameObject:
   - component: {fileID: 998404395702104031}
   - component: {fileID: 4607369833412014479}
   - component: {fileID: 580180112469499316}
+  - component: {fileID: 26694163059023885}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -473,6 +474,31 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Continue
+--- !u!114 &26694163059023885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254050132329224643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479cbb48f2591704aa947470aed1dfdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  localizedString:
+    m_TableReference:
+      m_TableCollectionName: GUID:3826b74f2f150184ca920c815a9790b7
+    m_TableEntryReference:
+      m_KeyId: 8912996912209920
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &1293679177501745021
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,8 +564,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 75.236984}
-  m_SizeDelta: {x: 578.7319, y: 49.689}
+  m_AnchoredPosition: {x: 0, y: 129.86635}
+  m_SizeDelta: {x: 578.7319, y: 59.0763}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4752597439642414624
 CanvasRenderer:
@@ -573,7 +599,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 25
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
@@ -1473,8 +1499,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 120.5815}
-  m_SizeDelta: {x: 639.8604, y: 200.163}
+  m_AnchoredPosition: {x: 0, y: 179}
+  m_SizeDelta: {x: 1252.92, y: 318.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3915329420442873929
 CanvasRenderer:
@@ -2313,6 +2339,7 @@ MonoBehaviour:
   playerCamera: {fileID: 2908222486801894389}
   maxDistance: 2
   inspectText: {fileID: 2231006880250943880}
+  crosshair: {fileID: 6498182627689841039}
   warningTextRoot: {fileID: 9162204298621142773}
   warningText: {fileID: 7968028063514132139}
   warningTextShowDuration: 1
@@ -2361,8 +2388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232.4, y: -77.5}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 513, y: -114}
+  m_SizeDelta: {x: 197.5492, y: 60.855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1426863811462822646
 CanvasRenderer:
@@ -2385,7 +2412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3735848, g: 0.3735848, b: 0.3735848, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

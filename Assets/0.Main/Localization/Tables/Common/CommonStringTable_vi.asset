@@ -84,12 +84,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8767207778951168
-    m_Localized: How did you know I was missing this?
+    m_Localized: "Sao em bi\u1EBFt ch\u1ECB \u0111ang b\u1ECB thi\u1EBFu d\u1EE5ng
+      c\u1EE5 b\u1EBFp n\xE0y nh\u1EC9?"
     m_Metadata:
       m_Items: []
   - m_Id: 8767536859848704
     m_Localized: "Em r\u1EA5t hi\u1EC3u c\u1EA3m x\xFAc c\u1EE7a m\u1ED9t ng\u01B0\u1EDDi
       \u1EDF nh\xE0 m\u1ED9t m\xECnh \u0111\u1EA5y!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8912996912209920
+    m_Localized: "Ti\u1EBFp t\u1EE5c"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8926395792498688
+    m_Localized: "L\xE0m xong ra l\u1EA5y L\xEC x\xEC nh\xE9"
     m_Metadata:
       m_Items: []
   references:

@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class PlayerInteract : CharacterInteract
 {
+    public static PlayerInteract Instance { get; private set; }
+
     [SerializeField] Transform playerCamera;
     [SerializeField] float maxDistance = 5f;
     [SerializeField] Text inspectText;
+    [SerializeField] GameObject crosshair;
 
     [SerializeField] CanvasGroup warningTextRoot;
     [SerializeField] Text warningText;
@@ -39,6 +42,7 @@ public class PlayerInteract : CharacterInteract
         base.Awake();
         inputs = GetComponent<StarterAssetsInputs>();
         firstPersonController = GetComponent<FirstPersonController>();
+        Instance = this;
     }
 
     private void Start()
@@ -53,6 +57,7 @@ public class PlayerInteract : CharacterInteract
 
     private void OnDestroy()
     {
+        Instance = null;
         if (QuantumConsole.Instance)
         {
             QuantumConsole.Instance.OnActivate -= OnOpenConsole;
@@ -158,6 +163,7 @@ public class PlayerInteract : CharacterInteract
         firstPersonController.SetActivePlayerUI(true);
         inputs.SetCursorState(inputs.cursorLocked);
         inputs.primary = false;
+        crosshair.SetActive(true);
 
         //rigLookTarget.follow = true;
     }
@@ -167,6 +173,7 @@ public class PlayerInteract : CharacterInteract
         firstPersonController.SetCanMove(false);
         firstPersonController.SetActivePlayerUI(false);
         inputs.SetCursorState(false);
+        crosshair.SetActive(false);
 
         //rigLookTarget.follow = false;
     }

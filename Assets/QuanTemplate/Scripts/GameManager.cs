@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using QFSW.QC;
@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager 
 {
+    public const string LEVEL_1_PREFIX = "Level_1_";
+
     [Command("camera-sensitivity")]
     public static float cameraSensitivity = 2f;
 

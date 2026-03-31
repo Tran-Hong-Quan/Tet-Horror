@@ -101,6 +101,10 @@ MonoBehaviour:
     m_Localized: When you're done, come and get this red gift!
     m_Metadata:
       m_Items: []
+  - m_Id: 9477458811559936
+    m_Localized: Door
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

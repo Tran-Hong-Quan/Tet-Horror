@@ -4,7 +4,8 @@ using UnityEngine.Localization;
 public class InspectableObject : MonoBehaviour
 {
     [SerializeField] LocalizedString localizedMessage;
-    [SerializeField] Transform targetObject;
+    [SerializeField] Transform iconTarget;
+    [SerializeField] Vector3 worldIconOffset = Vector3.zero;
 
     private string message;
     private InspectItemIcon inspectItemIcon;
@@ -19,7 +20,7 @@ public class InspectableObject : MonoBehaviour
             localizedMessage.RefreshString();
         }
 
-        targetObject = targetObject != null ? targetObject : transform;
+        iconTarget = iconTarget != null ? iconTarget : transform;
 
         InitIcon();
     }
@@ -56,6 +57,7 @@ public class InspectableObject : MonoBehaviour
             return;
         }
         inspectItemIcon = Instantiate(prefab, inspectItemCanvas.transform, true);
-        inspectItemIcon.SetTarget(transform);
+        inspectItemIcon.SetTarget(iconTarget);
+        inspectItemIcon.SetWorldOffset(worldIconOffset);
     }
 }

@@ -13,13 +13,13 @@ public class InspectItemIcon : MonoBehaviour
     private float currentAlpha;
     private bool shouldShow;
 
-    private readonly float showRadius = 3f;
-    private readonly Vector3 worldOffset = new(0f, 0f, 0f);
-    private readonly float fadeSpeed = 3f;
-    private readonly float maxAlpha = 1f;
-    private readonly bool pulse = true;
-    private readonly float pulseSpeed = 3f;
-    private readonly float pulseMinAlpha = 0.4f;
+    private Vector3 worldOffset = new(0f, 0f, 0f);
+    private const float showRadius = 1.5f;
+    private const float fadeSpeed = 3f;
+    private const float maxAlpha = 1f;
+    private const bool pulse = true;
+    private const float pulseSpeed = 3f;
+    private const float pulseMinAlpha = 0f;
 
 
     private void Awake()
@@ -34,7 +34,7 @@ public class InspectItemIcon : MonoBehaviour
         SetAlpha(0f);
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (cam == null)
             cam = Camera.main;
@@ -54,6 +54,11 @@ public class InspectItemIcon : MonoBehaviour
         target = newTarget;
     }
 
+    public void SetWorldOffset(Vector3 offset)
+    {
+        worldOffset = offset;
+    }
+
     public void Show()
     {
         shouldShow = true;
@@ -71,7 +76,7 @@ public class InspectItemIcon : MonoBehaviour
             shouldShow = false;
             return;
         }
-        shouldShow = Vector3.Distance(PlayerInteract.Instance.transform.position, target.position) <= showRadius;
+        shouldShow = Vector3.Distance(cam.transform.position, target.position) <= showRadius;
     }
 
     private void UpdateTargetPosition()

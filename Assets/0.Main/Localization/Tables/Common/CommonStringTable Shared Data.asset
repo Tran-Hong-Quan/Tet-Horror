@@ -98,6 +98,10 @@ MonoBehaviour:
     m_Key: When you're done, come and get this red gift!
     m_Metadata:
       m_Items: []
+  - m_Id: 9477458811559936
+    m_Key: Door
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -96,6 +96,8 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  targetObject: {fileID: 0}
+  worldIconOffset: {x: 0, y: 0.1, z: 0}
   objectNameKey: Dry Chicken
   rb: {fileID: 3161481946159050304}
   onPickUp:

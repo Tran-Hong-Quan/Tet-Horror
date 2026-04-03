@@ -1,14 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Room1LockDoor : InteractableObject
+public class Room1LockDoor : InteractableDoor
 {
-    [Header("Door Settings")]
-    [SerializeField] Transform doorTransform;         // Cửa cần xoay
-    [SerializeField] Vector3 closedEulerAngles;       // Góc khi đóng (Inspector)
-    [SerializeField] Vector3 openEulerAngles;         // Góc khi mở (Inspector)
-    [SerializeField] float rotateSpeed = 90f;         // Độ/giây xoay
-
     [Header("UI")]
     [SerializeField] GameObject lockPasswordCanvas;
     [SerializeField] Text displayText; // Kéo thả Text hiển thị
@@ -23,7 +17,6 @@ public class Room1LockDoor : InteractableObject
     private const string PlayerPrefKey = "Room1DoorUnlocked";
 
     bool isDoorUnlocked = false;
-    private bool isOpen = false;
 
     protected override void Start()
     {
@@ -41,25 +34,8 @@ public class Room1LockDoor : InteractableObject
             UpdateDisplay();
         }
     }
-    void Update()
-    {
-        // Luôn update xoay cửa theo trạng thái
-        Quaternion targetRotation = isOpen
-            ? Quaternion.Euler(openEulerAngles)
-            : Quaternion.Euler(closedEulerAngles);
-
-        // Xoay cửa đi theo đường ngắn nhất, mượt
-        doorTransform.rotation = Quaternion.RotateTowards(
-            doorTransform.rotation,
-            targetRotation,
-            rotateSpeed * Time.deltaTime
-        );
-    }
-
     public override void Interact(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
-
         if (!isDoorUnlocked)
         {
             if (characterInteract is PlayerInteract playerInteract)
@@ -73,10 +49,6 @@ public class Room1LockDoor : InteractableObject
         }
     }
 
-    public void OpenOrCloseDoor()
-    {
-        isOpen = !isOpen; // Đổi trạng thái cửa
-    }
 
     void ShowLockPasswordCanvas(PlayerInteract playerInteract)
     {

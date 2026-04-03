@@ -10,7 +10,8 @@ public class InspectableObject : MonoBehaviour
     private string message;
     private InspectItemIcon inspectItemIcon;
 
-    private const string ResourceIconPath = "InspectItemIcon";
+    const string ResourceIconPath = "InspectItemIcon";
+    const string ShowInspectItemIconKey = "ShowInspectItemIcon";
 
     protected virtual void Start()
     {
@@ -44,6 +45,10 @@ public class InspectableObject : MonoBehaviour
     }
     private void InitIcon()
     {
+        if(GetShowInspactItemIcon() == false)
+        {
+            return;
+        }
         InspectItemCanvas inspectItemCanvas = InspectItemCanvas.Get();
         if (inspectItemCanvas == null)
         {
@@ -59,5 +64,15 @@ public class InspectableObject : MonoBehaviour
         inspectItemIcon = Instantiate(prefab, inspectItemCanvas.transform, true);
         inspectItemIcon.SetTarget(iconTarget);
         inspectItemIcon.SetWorldOffset(worldIconOffset);
+    }
+
+    public static void SetShowInspactItemIcon(bool isShow)
+    {
+        PlayerPrefs.SetInt(ShowInspectItemIconKey, isShow ? 1 : 0);
+    }
+
+    public static bool GetShowInspactItemIcon()
+    {
+        return PlayerPrefs.GetInt(ShowInspectItemIconKey, 0) == 1;
     }
 }

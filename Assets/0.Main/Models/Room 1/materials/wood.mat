@@ -27,19 +27,20 @@ Material:
   m_ValidKeywords:
   - N_F_DDMD_ON
   - N_F_EAL_ON
-  - N_F_OFLMB_ON
   - N_F_O_ON
   - N_F_RDC_ON
   - N_F_RELGI_ON
   - N_F_SS_ON
   - N_F_TRANSAFFSHA_ON
+  - N_F_TRANS_ON
   - N_F_USETLB_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -166,8 +167,8 @@ Material:
     - _AlphaBaseCutout: 1
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _BleModDest: 0
-    - _BleModSour: 1
+    - _BleModDest: 10
+    - _BleModSour: 5
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -246,7 +247,7 @@ Material:
     - _N_F_NLASOBF: 0
     - _N_F_NM: 0
     - _N_F_O: 1
-    - _N_F_OFLMB: 1
+    - _N_F_OFLMB: 0
     - _N_F_PA: 0
     - _N_F_PT: 0
     - _N_F_R: 0
@@ -335,7 +336,7 @@ Material:
     - _StraWidt: 10
     - _Surface: 0
     - _TEXMCOLINT: 1
-    - _TRANSMODE: 0
+    - _TRANSMODE: 1
     - _TexturePatternStyle: 0
     - _TrailSize: 1.5
     - _TransAffSha: 1

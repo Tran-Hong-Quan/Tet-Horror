@@ -105,6 +105,107 @@ MonoBehaviour:
     m_Localized: Door
     m_Metadata:
       m_Items: []
+  - m_Id: 11304134264627200
+    m_Localized: Album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11307993565372416
+    m_Localized: Count the number of living creatures
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11315771566596096
+    m_Localized: 'FLASH FLOOD TRAGEDY: A VILLAGE WIPED OUT IN THE NIGHT
+
+      NEWS
+      | 12/10/2025'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11452953644113920
+    m_Localized: 'Early this morning, a devastating flash flood unexpectedly struck
+      a highland residential area, leveling an entire village in minutes. A torrent
+      of mud and rocks cascaded down from the mountaintop while residents were asleep,
+      leaving them no time to react.
+
+
+
+      As of now, authorities have confirmed
+      dozens of deaths and missing persons. Houses and property at the scene have
+      been buried under meters of mud and debris. Access to the area is completely
+      cut off due to severe landslides, making rescue efforts extremely difficult.
+
+
+
+      Authorities
+      are making every effort to search for those still trapped, but hope remains
+      slim as the weather continues to worsen.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11470498296111104
+    m_Localized: Old newspaper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11531237992046592
+    m_Localized: Tools are needed to open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532036868546560
+    m_Localized: Turn on the circuit breaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532242511077376
+    m_Localized: Circuit breaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11548433736671232
+    m_Localized: Screwdriver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11945748192436224
+    m_Localized: Mini speaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13107209237307392
+    m_Localized: Put the meat here
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13108772261470208
+    m_Localized: Pork
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16627535120310272
+    m_Localized: It seems the house's electrical system is still not quite stable
+      after the storm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16628975679184896
+    m_Localized: Could you please check the circuit breaker for me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18520895846227968
+    m_Localized: Ah, my head hurts so much!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18522969589817344
+    m_Localized: I can barely breathe, I've been beaten and my hands and neck are
+      tied.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523115354464256
+    m_Localized: Sister, please help me, I can't breath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523185550336000
+    m_Localized: I'm also in too much pain, I can't untie you
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523249744158720
+    m_Localized: But it's okay, I have a way
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523453667024896
+    m_Localized: Hang in there, I will find a way to help you
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

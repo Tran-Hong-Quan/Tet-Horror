@@ -139,20 +139,19 @@ public class PlayerInteract : CharacterInteract
         EnableControlPlayer();
     }
 
-    public void Dialogue(DialogueData dialogueData, System.Action<int> onDoneDialogue = null)
+    public void Dialogue(DialogueData dialogueData, System.Action<int> onDoneDialogue = null, bool enableControlPlayerAfterDone = true)
     {
         var t = onDoneDialogue;
-        onDoneDialogue = DoneDialogue;
+        if (enableControlPlayerAfterDone)
+        {
+            //Make sure enable control player call before OnDoneDialogue
+            onDoneDialogue = _ => EnableControlPlayer();
+        }
         onDoneDialogue += t;
 
         DisableControlPlayer();
 
         dialogueManager.StartDialogue(dialogueData, onDoneDialogue);
-    }
-
-    private void DoneDialogue(int choiceID)
-    {
-        EnableControlPlayer();
     }
 
     //Tween lookRigTween;

@@ -18,3 +18,13 @@ MonoBehaviour:
       position: {x: 0.041, y: 0.135, z: -0.018}
       rotation: {x: 0, y: 0, z: 59.54}
       scale: {x: 1, y: 1, z: 1}
+  - key: Screwdriver
+    value:
+      position: {x: 0.025, y: 0.091, z: 0.061}
+      rotation: {x: 80, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  - key: PorkBowl
+    value:
+      position: {x: 0.001, y: 0.137, z: 0.001}
+      rotation: {x: -10.9, y: 38, z: 0}
+      scale: {x: 1, y: 1, z: 1}

@@ -102,6 +102,86 @@ MonoBehaviour:
     m_Key: Door
     m_Metadata:
       m_Items: []
+  - m_Id: 11304134264627200
+    m_Key: Album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11307993565372416
+    m_Key: Count the number of living creatures.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11315771566596096
+    m_Key: Room1_news_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11452953644113920
+    m_Key: Room1_news_content
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11470498296111104
+    m_Key: Old newspaper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11531237992046592
+    m_Key: Tools are needed to open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532036868546560
+    m_Key: Turn on the circuit breaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11532242511077376
+    m_Key: Circuit breaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11548433736671232
+    m_Key: Screwdriver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11945748192436224
+    m_Key: Mini speaker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13107209237307392
+    m_Key: Put the meat here
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13108772261470208
+    m_Key: Pork
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16627535120310272
+    m_Key: Room1CheckCircusBreaker1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16628975679184896
+    m_Key: Room1CheckCircusBreaker2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18520895846227968
+    m_Key: Room_2_Intro_1_Dialogue_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18522969589817344
+    m_Key: Room_2_Intro_1_Dialogue_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523115354464256
+    m_Key: Room_2_Intro_2_Dialogue_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523185550336000
+    m_Key: Room_2_Intro_2_Dialogue_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523249744158720
+    m_Key: Room_2_Intro_2_Dialogue_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18523453667024896
+    m_Key: Room_2_Intro_3_Dialogue_1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

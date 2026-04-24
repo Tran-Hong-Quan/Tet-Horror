@@ -14,15 +14,11 @@ public class Room1LockDoor : InteractableDoor
     private string currentInput = "";
     private PlayerInteract playerInteract;
 
-    private const string PlayerPrefKey = "Room1DoorUnlocked";
-
     bool isDoorUnlocked = false;
 
     protected override void Start()
     {
         base.Start();
-
-        isDoorUnlocked = PlayerPrefs.GetInt(PlayerPrefKey, 0) == 1;
 
         if (!isDoorUnlocked)
         {
@@ -97,8 +93,6 @@ public class Room1LockDoor : InteractableDoor
 
                 isDoorUnlocked = true;
                 OpenOrCloseDoor();
-                PlayerPrefs.SetInt(PlayerPrefKey, 1);
-                PlayerPrefs.Save();
                 return; // khỏi gọi UpdateDisplay
             }
             else

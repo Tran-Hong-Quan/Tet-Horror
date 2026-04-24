@@ -61,13 +61,13 @@ MonoBehaviour:
   active: 1
   lift:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9463255, z: 0.84942657, w: -0.25113472}
+    m_Value: {x: 1, y: 0.8830294, z: 0.81520677, w: -0.19685058}
   gamma:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.36053908, z: 0.15801132, w: -0.3177002}
+    m_Value: {x: 1, y: 0.53535634, z: 0.5406547, w: 0.37007895}
   gain:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.53604895, z: 0.5222601, w: -1}
+    m_Value: {x: 0.9522927, y: 0.9358885, z: 1, w: -0.35039353}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   type:
     m_OverrideState: 1
     m_Value: 2

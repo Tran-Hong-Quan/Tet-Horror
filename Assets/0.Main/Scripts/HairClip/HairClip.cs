@@ -6,6 +6,7 @@ using System.IO;
 using UnityEngine.Networking;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine.EventSystems;
+using SFB;
 
 public class HairClip : InteractableObject
 {
@@ -224,22 +225,26 @@ public class HairClip : InteractableObject
 
     void PickImageFromDisk()
     {
-#if !UNITY_EDITOR && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LINUX)
+        //#if !UNITY_EDITOR && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LINUX)
         UpdateStatus("Selecting image...");
-        
-        // Sử dụng System.Windows.Forms trên Windows
-        System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog();
-        openFileDialog.Filter = "Image files (*.png;*.jpg;*.jpeg;*.bmp)|*.png;*.jpg;*.jpeg;*.bmp|All files (*.*)|*.*";
-        
-        if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+
+        var paths = StandaloneFileBrowser.OpenFilePanel(
+            "Select Image",
+            "",
+            new[] { new ExtensionFilter("Image Files", "png", "jpg", "jpeg", "bmp") },
+            false
+        );
+
+        if (paths.Length > 0 && !string.IsNullOrEmpty(paths[0]))
         {
-            StartCoroutine(LoadImageFromDisk(openFileDialog.FileName));
+            StartCoroutine(LoadImageFromDisk(paths[0]));
         }
         else
         {
             UpdateStatus("No image selected");
         }
-#endif
+
+        //#endif
     }
 
     void PickImageFromGallery()

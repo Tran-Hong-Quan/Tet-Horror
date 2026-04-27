@@ -182,6 +182,62 @@ MonoBehaviour:
     m_Key: Room_2_Intro_3_Dialogue_1
     m_Metadata:
       m_Items: []
+  - m_Id: 18889042583494656
+    m_Key: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18889163488501760
+    m_Key: Setting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18889372121571328
+    m_Key: Thank Dads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18889591538196480
+    m_Key: Out game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18889735201497088
+    m_Key: Continue Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19259579834966016
+    m_Key: Move
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19259736420917248
+    m_Key: Space
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19259890867773440
+    m_Key: Interact
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19260012326428672
+    m_Key: Drop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19260682412630016
+    m_Key: Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19271135868100608
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19273718628229120
+    m_Key: Sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19428734391427072
+    m_Key: Back to Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19429119248179200
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

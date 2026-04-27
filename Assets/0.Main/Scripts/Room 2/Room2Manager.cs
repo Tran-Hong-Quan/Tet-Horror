@@ -8,6 +8,9 @@ public class Room2Manager : MonoBehaviour
     [SerializeField] private DialogueData introDialogue2;
     [SerializeField] private DialogueData introDialogue3;
 
+    [SerializeField] private string mainMenuSceneName = "Main Menu";
+    [SerializeField] private bool isDemo = true;
+
     public UnityEvent onDoneIntroDialogue1;
     public UnityEvent onDoneIntroDialogue2;
     public UnityEvent onDoneIntroDialogue3;
@@ -36,7 +39,20 @@ public class Room2Manager : MonoBehaviour
     {
         PlayerInteract.Instance.Dialogue(introDialogue3, _ =>
         {
+            if (isDemo)
+            {
+                EndDemo();
+            }
             onDoneIntroDialogue3.Invoke();
         }, false);
+    }
+
+    public void EndDemo()
+    {
+        if (isDemo)
+        {
+            MainMenu.SetOpenThankBoardOnStart();
+            UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenuSceneName);
+        }
     }
 }

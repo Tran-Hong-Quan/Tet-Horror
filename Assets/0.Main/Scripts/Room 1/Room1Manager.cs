@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Room1Manager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Room1Manager : MonoBehaviour
 
     [SerializeField] UnityEvent onInitMission3;
     [SerializeField] UnityEvent onStartMission3;
+
+    [SerializeField] string room2SceneName = "Room2";
 
     private bool mission2Started = false;
 
@@ -31,5 +34,10 @@ public class Room1Manager : MonoBehaviour
     public void StartMission3()
     {
         onStartMission3.Invoke();
+    }
+
+    public void LoadRoom2()
+    {
+        SceneManager.LoadScene(room2SceneName);
     }
 }

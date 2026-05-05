@@ -7,8 +7,9 @@ public class InspectableObject : MonoBehaviour
     [SerializeField] Transform iconTarget;
     [SerializeField] Vector3 worldIconOffset = Vector3.zero;
 
+    public bool CanInspect { get; private set; } = true;
     private string message;
-    private InspectItemIcon inspectItemIcon;
+    protected InspectItemIcon inspectItemIcon;
 
     const string ResourceIconPath = "InspectItemIcon";
     const string ShowInspectItemIconKey = "ShowInspectItemIcon";
@@ -22,7 +23,7 @@ public class InspectableObject : MonoBehaviour
         }
 
         iconTarget = iconTarget != null ? iconTarget : transform;
-
+        CanInspect = true;
         InitIcon();
     }
 
@@ -32,6 +33,35 @@ public class InspectableObject : MonoBehaviour
         {
             localizedMessage.StringChanged -= OnMessageChanged;
         }
+        if (inspectItemIcon != null)
+        {
+            Destroy(inspectItemIcon.gameObject);
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (inspectItemIcon != null)
+        {
+            inspectItemIcon.gameObject.SetActive(true);
+        }
+    }
+
+    protected void OnDisable()
+    {
+        if (inspectItemIcon != null)
+        {
+            inspectItemIcon.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetCanInspect(bool canInspect)
+    {
+        if (inspectItemIcon != null)
+        {
+            inspectItemIcon.gameObject.SetActive(canInspect);
+        }
+        this.CanInspect = canInspect;
     }
 
     private void OnMessageChanged(string message)
@@ -41,11 +71,15 @@ public class InspectableObject : MonoBehaviour
 
     public virtual string GetMessage(CharacterInteract characterInteract)
     {
+        if (!CanInspect)
+        {
+            return "";
+        }
         return message;
     }
     private void InitIcon()
     {
-        if(GetShowInspactItemIcon() == false)
+        if (GetShowInspactItemIcon() == false)
         {
             return;
         }
@@ -73,6 +107,6 @@ public class InspectableObject : MonoBehaviour
 
     public static bool GetShowInspactItemIcon()
     {
-        return PlayerPrefs.GetInt(ShowInspectItemIconKey, 0) == 1;
+        return PlayerPrefs.GetInt(ShowInspectItemIconKey, 1) == 1;
     }
 }

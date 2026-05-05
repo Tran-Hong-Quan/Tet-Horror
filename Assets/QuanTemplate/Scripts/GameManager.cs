@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using QFSW.QC;
 using UnityEngine.SceneManagement;
+using CodeStage.AdvancedFPSCounter;
 
 public class GameManager 
 {
@@ -18,7 +19,13 @@ public class GameManager
         SceneManager.LoadScene(currentScene.name);
     }
 
-    [Command("set-cursor-lock-state")]
+    [Command("quit")]
+    public static void QuitGame()
+    {
+        Application.Quit();
+    }
+
+        [Command("set-cursor-lock-state")]
     public static void SetCursorLockState(string state)
     {
         switch (state.ToLower())
@@ -50,5 +57,11 @@ public class GameManager
 #else
         cameraSensitivity = PlayerPrefs.GetFloat("Camera sensitivity", 1);
 #endif
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static void OnGameStart()
+    {
+        GameObject.Instantiate(Resources.Load<GameObject>("Advanced FPS Counter"));
     }
 }

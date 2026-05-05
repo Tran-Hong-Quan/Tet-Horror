@@ -54,15 +54,16 @@ public class Room1PutPorkMission : InteractableObject
         }
     }
 
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
 
         if (!isMissionComplete && characterInteract.HoldingObject != null && characterInteract.HoldingObject.gameObject == targetObject)
         {
             characterInteract.DropHoldingObject();
             targetObject.GetComponent<Rigidbody>().isKinematic = true;
             targetObject.GetComponent<Collider>().enabled = false;
+            targetObject.GetComponent<InspectableObject>().SetCanInspect(false);
             targetObject.transform.SetParent(targetRoot, true);
             targetObject.transform.DOLocalMove(Vector3.zero, moveDuration).SetEase(Ease.InOutSine);
             targetObject.transform.DOLocalRotate(Vector3.zero, moveDuration).SetEase(Ease.InOutSine);

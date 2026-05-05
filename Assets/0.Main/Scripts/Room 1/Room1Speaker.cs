@@ -5,9 +5,9 @@ public class Room1Speaker : InteractableObject
     public bool isMusicOn = true;
     public AudioSource audioSource;
 
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         ToggleMusic();
     }
 

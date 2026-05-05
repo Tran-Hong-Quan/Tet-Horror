@@ -1,3 +1,4 @@
+using CodeStage.AdvancedFPSCounter;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,11 +16,12 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        if(PlayerPrefs.GetInt(OPEN_THANK_BOARD_ON_START_KEY, 0) == 1)
+        if (PlayerPrefs.GetInt(OPEN_THANK_BOARD_ON_START_KEY, 0) == 1)
         {
             PlayerPrefs.SetInt(OPEN_THANK_BOARD_ON_START_KEY, 0);
             thankBoard.SetActive(true);
         }
+        Application.targetFrameRate = 120;
     }
 
     public static void SetOpenThankBoardOnStart()
@@ -49,5 +51,17 @@ public class MainMenu : MonoBehaviour
     public void OpenLink(string uri)
     {
         Application.OpenURL(uri);
+    }
+
+    public void ToggleFPS()
+    {
+        if (AFPSCounter.Instance.OperationMode == OperationMode.Normal)
+        {
+            AFPSCounter.Instance.OperationMode = OperationMode.Disabled;
+        }
+        else
+        {
+            AFPSCounter.Instance.OperationMode = OperationMode.Normal;
+        }
     }
 }

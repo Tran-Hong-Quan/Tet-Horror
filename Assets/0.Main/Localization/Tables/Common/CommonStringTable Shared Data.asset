@@ -107,7 +107,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11307993565372416
-    m_Key: Count the number of living creatures.
+    m_Key: Room_1_Door_Hint
     m_Metadata:
       m_Items: []
   - m_Id: 11315771566596096
@@ -236,6 +236,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19429119248179200
     m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19918870975750144
+    m_Key: Clear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19992513449697280
+    m_Key: DontJump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19993188611006464
+    m_Key: ThankDadsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20729170440364032
+    m_Key: ShowHide
     m_Metadata:
       m_Items: []
   m_Metadata:

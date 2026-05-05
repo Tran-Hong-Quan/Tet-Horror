@@ -577,7 +577,7 @@ MonoBehaviour:
   _initialiseOnStartup: 0
   _focusOnActivate: 1
   _closeOnSubmit: 0
-  _singletonMode: 0
+  _singletonMode: 1
   _autoScroll: 1
   _enableAutocomplete: 1
   _showPopupDisplay: 1
@@ -618,8 +618,8 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_VertexColorAlwaysGammaSpace: 1
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224005418473288314}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.96943974
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

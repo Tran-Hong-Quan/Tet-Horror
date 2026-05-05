@@ -69,7 +69,7 @@ Material:
     - _LightingEnabled: 0
     - _Mode: 0
     - _QueueOffset: 0
-    - _SoftParticlesEnabled: 1
+    - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 0.2
     - _SoftParticlesNearFadeDistance: 0
     - _SrcBlend: 1

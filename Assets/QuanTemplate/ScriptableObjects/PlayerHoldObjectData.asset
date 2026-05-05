@@ -28,3 +28,8 @@ MonoBehaviour:
       position: {x: 0.001, y: 0.137, z: 0.001}
       rotation: {x: -10.9, y: 38, z: 0}
       scale: {x: 1, y: 1, z: 1}
+  - key: Viberator
+    value:
+      position: {x: -0.006, y: 0.094, z: 0.049}
+      rotation: {x: -180, y: -180, z: 180}
+      scale: {x: 1, y: 1, z: 1}

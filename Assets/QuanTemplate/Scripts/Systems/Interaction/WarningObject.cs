@@ -5,9 +5,9 @@ using UnityEngine;
 public class WarningObject : InteractableObject
 {
     public string warningMessageKey;
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         if(characterInteract is PlayerInteract)
         {
             var player = characterInteract as PlayerInteract;

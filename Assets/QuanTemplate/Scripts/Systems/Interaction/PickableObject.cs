@@ -17,9 +17,9 @@ public class PickableObject : InteractableObject
             rb = GetComponent<Rigidbody>();
     }
 
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         PickUp(characterInteract);
     }
 
@@ -27,6 +27,7 @@ public class PickableObject : InteractableObject
     {
         SetPickable(false);
         characterInteract.PickUp(this);
+        SetCanInspect(false);
         onPickUp?.Invoke(this);
     }
 
@@ -48,5 +49,7 @@ public class PickableObject : InteractableObject
             SetPickable(true);
             rb.AddForce(characterInteract.transform.forward * characterInteract.ThrowHoldingObjectForce, ForceMode.Impulse);
         }
+
+        SetCanInspect(true);
     }
 }

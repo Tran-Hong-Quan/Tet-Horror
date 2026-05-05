@@ -33,9 +33,9 @@ public class InteractableDoor : InteractableObject
             rotateSpeed * Time.deltaTime
         );
     }
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         OpenOrCloseDoor();
     }
 

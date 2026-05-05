@@ -13,11 +13,11 @@ public class LocalizedTextBinder : MonoBehaviour
         {
             text = GetComponent<Text>();
         }
-        localizedString.StringChanged += UpdateText;
     }
 
     private void OnEnable()
     {
+        localizedString.StringChanged += UpdateText;
         localizedString.RefreshString();
     }
 

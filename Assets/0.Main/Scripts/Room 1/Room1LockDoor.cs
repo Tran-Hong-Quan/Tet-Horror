@@ -5,20 +5,24 @@ public class Room1LockDoor : InteractableDoor
 {
     [Header("UI")]
     [SerializeField] GameObject lockPasswordCanvas;
-    [SerializeField] Text displayText; // Kéo thả Text hiển thị
-    [SerializeField] Button[] buttons; // Kéo thả tất cả nút 1-9,0,#,* vào đây
+    [SerializeField] Text displayText;
+    [SerializeField] Button[] buttons;
 
     [Header("Settings")]
-    [SerializeField] string correctPassword = "1234"; // mật khẩu
+    [SerializeField] string correctPassword = "1234";
+    [SerializeField] bool autoCheckWhenFull = true; // tự check khi nhập đủ
 
     private string currentInput = "";
-    private PlayerInteract playerInteract;
+    private int maxLength;
 
+    private PlayerInteract playerInteract;
     bool isDoorUnlocked = false;
 
     protected override void Start()
     {
         base.Start();
+
+        maxLength = correctPassword.Length; // 🔥 lấy độ dài ở đây
 
         if (!isDoorUnlocked)
         {
@@ -30,7 +34,8 @@ public class Room1LockDoor : InteractableDoor
             UpdateDisplay();
         }
     }
-    public override void Interact(CharacterInteract characterInteract)
+
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
         if (!isDoorUnlocked)
         {
@@ -44,7 +49,6 @@ public class Room1LockDoor : InteractableDoor
             OpenOrCloseDoor();
         }
     }
-
 
     void ShowLockPasswordCanvas(PlayerInteract playerInteract)
     {
@@ -68,59 +72,69 @@ public class Room1LockDoor : InteractableDoor
 
     private DisplayState displayState = DisplayState.Input;
 
-    private void OnButtonPressed(string key)
+    public void OnButtonPressed(string key)
     {
-        // Nếu đang hiển thị UNLOCK, không cần làm gì
         if (displayState == DisplayState.Unlock)
             return;
 
         if (key == "*")
         {
-            // Xóa toàn bộ input
             currentInput = "";
 
-            // Nếu đang hiển thị WRONG, reset về trạng thái Input
             if (displayState == DisplayState.Wrong)
                 displayState = DisplayState.Input;
         }
         else if (key == "#")
         {
-            // Kiểm tra mật khẩu
-            if (currentInput == correctPassword)
-            {
-                displayState = DisplayState.Unlock;
-                displayText.text = "UNLOCK";
-
-                isDoorUnlocked = true;
-                OpenOrCloseDoor();
-                return; // khỏi gọi UpdateDisplay
-            }
-            else
-            {
-                displayState = DisplayState.Wrong;
-                displayText.text = "WRONG";
-                currentInput = ""; // reset input để nhập lại
-                return; // khỏi gọi UpdateDisplay
-            }
+            CheckPassword();
+            return;
         }
         else
         {
-            // Bấm số, nếu trước đó hiển thị WRONG thì chuyển về Input
             if (displayState == DisplayState.Wrong)
                 displayState = DisplayState.Input;
 
+            // 🔥 GIỚI HẠN ĐỘ DÀI
+            if (currentInput.Length >= maxLength)
+                return;
+
             currentInput += key;
+
+            // 🔥 AUTO CHECK
+            if (autoCheckWhenFull && currentInput.Length == maxLength)
+            {
+                CheckPassword();
+                return;
+            }
         }
 
         UpdateDisplay();
     }
 
+    private void CheckPassword()
+    {
+        if (currentInput == correctPassword)
+        {
+            displayState = DisplayState.Unlock;
+            displayText.text = "UNLOCK";
+
+            isDoorUnlocked = true;
+            OpenOrCloseDoor();
+        }
+        else
+        {
+            displayState = DisplayState.Wrong;
+            displayText.text = "WRONG";
+            currentInput = "";
+        }
+    }
+
     private void UpdateDisplay()
     {
-        // Nếu đang hiển thị UNLOCK hoặc WRONG, không ghi đè nữa
         if (displayState == DisplayState.Unlock || displayState == DisplayState.Wrong)
             return;
 
+        // optional: hiển thị dạng **** thay vì số thật
         displayText.text = currentInput;
     }
 }

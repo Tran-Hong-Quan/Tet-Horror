@@ -79,9 +79,9 @@ public class HairClip : InteractableObject
 
     PlayerInteract currentPlayerInteract;
 
-    override public void Interact(CharacterInteract characterInteract)
+    override protected void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         OpenChangeIconBoard(characterInteract as PlayerInteract);
     }
 

@@ -28,9 +28,9 @@ public class Room1Book : InteractableObject
         albumPages[currentPageIndex].SetActive(true);
     }
 
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         if (characterInteract is not PlayerInteract)
         {
             return;

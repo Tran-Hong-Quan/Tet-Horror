@@ -39,9 +39,9 @@ public class Room1CircusBreaker : InteractableObject
         }
     }
 
-    public override void Interact(CharacterInteract characterInteract)
+    protected override void OnInteract(CharacterInteract characterInteract)
     {
-        base.Interact(characterInteract);
+        base.OnInteract(characterInteract);
         if (!isOpen)
         {
             TryOpenLid(characterInteract);
